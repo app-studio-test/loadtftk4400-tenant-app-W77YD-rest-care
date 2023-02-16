@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadtftk4400-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadtftk4400-tenant-component
+    app.kubernetes.io/part-of: loadtftk4400-tenant-app
+  name: loadtftk4400-tenant-component
+  namespace: loadtftk4400-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadtftk4400-tenant-component
+    weight: null
+status: {}
